@@ -1,7 +1,7 @@
 
 
 def invertir_lista(lista):
-    lista.sort(reverse=True)
+    lista.reverse()
     return lista
 
 
