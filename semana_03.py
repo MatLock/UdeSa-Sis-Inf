@@ -7,7 +7,7 @@ def crear_album(figus_total):
     return [0 for _ in range(figus_total)]
 
 def album_incompleto(album):
-    return all(elem >= 1 for elem in album)
+    return any(elem == 0 for elem in album)
 
 def comprar_figu(figus_total):
     return randrange(figus_total)
