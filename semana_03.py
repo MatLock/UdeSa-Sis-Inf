@@ -18,7 +18,7 @@ def comprar_paquete(figus_total, figus_paquete):
 def cuantas_figus(figus_total):
     compras_totales = 0
     album = crear_album(figus_total)
-    while not album_incompleto(album):
+    while album_incompleto(album):
         elem = comprar_figu(figus_total)
         album[elem] = album[elem] + 1
         compras_totales = compras_totales + 1
@@ -27,7 +27,7 @@ def cuantas_figus(figus_total):
 def cuantos_paquetes(figus_total, figus_paquete):
     compras_totales = 0
     album = crear_album(figus_total)
-    while not album_incompleto(album):
+    while album_incompleto(album):
         paquete = comprar_paquete(figus_total, figus_paquete)
         compras_totales += 1
         for i in range(len(paquete)):
